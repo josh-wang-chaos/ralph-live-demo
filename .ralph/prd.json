@@ -35,7 +35,7 @@
         "Fill 40% squares Emerald-500 (Human), 30% Violet-500 (Ralph Night Work).",
         "Add glowing effect ('shadow-purple-500/50') only to Violet squares."
       ],
-      "passes": false
+      "passes": true
     },
     {
       "category": "data-viz",

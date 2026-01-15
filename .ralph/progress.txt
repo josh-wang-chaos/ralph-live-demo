@@ -24,3 +24,11 @@ Files:
 |- .ralph/prd.json
 Notes: none.
 
+[0.0.1]
+Task: Completed meta-viz "Ghost Commits" heatmap (feature 3).
+Decisions: Used deterministic stripe pattern for square colors to guarantee 40/30/30 split, grid cols 10->12 for mobile fit.
+Files:
+|- app/page.tsx
+|- .ralph/prd.json
+Notes: none.
+

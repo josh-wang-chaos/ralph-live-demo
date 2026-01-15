@@ -20,15 +20,49 @@ function Header() {
   );
 }
 
+const HEATMAP_SQUARES = Array.from({ length: 70 }, (_, index) => {
+  const stripe = index % 10;
+  if (stripe < 4) {
+    return "emerald";
+  }
+  if (stripe < 7) {
+    return "violet";
+  }
+  return "dim";
+});
+
+function CommitHeatmap() {
+  return (
+    <GlassCard className="col-span-1 md:col-span-2">
+      <div className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">
+        Contribution Velocity
+      </div>
+      <div className="mt-4 grid grid-cols-10 gap-1 sm:grid-cols-12">
+        {HEATMAP_SQUARES.map((tone, index) => (
+          <span
+            key={`square-${index}`}
+            className={[
+              "h-3 w-3 rounded-sm",
+              tone === "emerald" && "bg-emerald-500",
+              tone === "violet" && "bg-violet-500 shadow-md shadow-purple-500/50",
+              tone === "dim" && "bg-white/10",
+            ]
+              .filter(Boolean)
+              .join(" ")}
+          />
+        ))}
+      </div>
+    </GlassCard>
+  );
+}
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
       <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-900/20 to-slate-950">
         <main className="grid grid-cols-1 gap-6 p-4 md:grid-cols-4 md:p-8">
           <Header />
-          <GlassCard className="md:col-span-2">
-            <div className="text-sm text-slate-300">Primary Console</div>
-          </GlassCard>
+          <CommitHeatmap />
           <GlassCard>
             <div className="text-sm text-slate-300">Metrics</div>
           </GlassCard>
