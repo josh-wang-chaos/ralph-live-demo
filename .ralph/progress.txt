@@ -16,3 +16,11 @@ Files:
 |- .ralph/prd.json
 Notes: none.
 
+[0.0.1]
+Task: Completed header-interaction "Autopilot" master switch (feature 2).
+Decisions: Kept Header as local component in app/page.tsx to avoid extra files, static ON state styling per PRD.
+Files:
+|- app/page.tsx
+|- .ralph/prd.json
+Notes: none.
+

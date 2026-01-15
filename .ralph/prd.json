@@ -23,7 +23,7 @@
         "Add logo text 'RALPH // OS' (mono font, tracking-widest).",
         "Build toggle switch. 'OFF': gray, text 'MANUAL'. 'ON': neon green ('bg-emerald-400'), text 'RALPH: ONLINE', glowing shadow ('shadow-emerald-500/50')."
       ],
-      "passes": false
+      "passes": true
     },
     {
       "category": "meta-viz",
