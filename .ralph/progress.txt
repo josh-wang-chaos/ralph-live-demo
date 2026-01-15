@@ -1,0 +1,18 @@
+[0.0.1]
+Task: Completed visual-core "Setup Responsive Bento Grid and Dark Theme" (feature 1).
+Decisions: Scaffolded minimal Next app to run checks, added flat ESLint config with TS parser to satisfy ESLint v9.
+Files:
+|- app/layout.tsx
+|- app/page.tsx
+|- app/globals.css
+|- components/GlassCard.tsx
+|- next-env.d.ts
+|- next.config.mjs
+|- postcss.config.mjs
+|- tsconfig.json
+|- eslint.config.mjs
+|- package.json
+|- pnpm-lock.yaml
+|- .ralph/prd.json
+Notes: none.
+
