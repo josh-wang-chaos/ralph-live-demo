@@ -1,0 +1,16 @@
+.DS_Store
+.idea
+.next/
+.turbo/
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.env*
+.vercel
+out/
+dist/
+coverage/
+*.log
+*.tsbuildinfo

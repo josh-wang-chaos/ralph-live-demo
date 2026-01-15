@@ -1,0 +1,64 @@
+{
+  "project": "ralph-command-center",
+  "version": "0.0.1",
+  "scope": "live-demo-visuals",
+  "features": [
+    {
+      "category": "visual-core",
+      "description": "Setup Responsive Bento Grid and Dark Theme",
+      "steps": [
+        "Force entire app background to deep void black ('bg-slate-950') with subtle top-center radial gradient ('from-indigo-900/20 to-slate-950').",
+        "Initialize global layout in 'page.tsx' using CSS Grid. On mobile, use a single column ('grid-cols-1') with tighter padding ('p-4').",
+        "On desktop breakpoint (md+), switch to a 4-column Bento layout ('md:grid-cols-4') with larger padding ('md:p-8') and 'gap-6'.",
+        "Create reusable 'GlassCard' component: 'bg-white/5', 'backdrop-blur-xl', 'border-white/10', 'rounded-2xl md:rounded-3xl'."
+      ],
+      "passes": false
+    },
+    {
+      "category": "header-interaction",
+      "description": "The Responsive 'Autopilot' Master Switch",
+      "steps": [
+        "Create Header component spanning full width ('col-span-full').",
+        "Use flex layout: Stack vertically centered on mobile ('flex-col items-center gap-4'), switch to row between on desktop ('md:flex-row md:justify-between').",
+        "Add logo text 'RALPH // OS' (mono font, tracking-widest).",
+        "Build toggle switch. 'OFF': gray, text 'MANUAL'. 'ON': neon green ('bg-emerald-400'), text 'RALPH: ONLINE', glowing shadow ('shadow-emerald-500/50')."
+      ],
+      "passes": false
+    },
+    {
+      "category": "meta-viz",
+      "description": "The 'Ghost Commits' Heatmap (Human vs AI)",
+      "steps": [
+        "Create 'CommitHeatmap' card. Ensure it spans full width on mobile ('col-span-1') and 2 columns on desktop ('md:col-span-2').",
+        "Render visible title 'CONTRIBUTION VELOCITY'.",
+        "Generate grid of small rounded squares representing daily work (adjust grid density for mobile if needed so it fits).",
+        "Fill 40% squares Emerald-500 (Human), 30% Violet-500 (Ralph Night Work).",
+        "Add glowing effect ('shadow-purple-500/50') only to Violet squares."
+      ],
+      "passes": false
+    },
+    {
+      "category": "data-viz",
+      "description": "Holographic Token Velocity Gauge",
+      "steps": [
+        "Create 'VelocityGauge' card (spans 1 col on mobile, 1 col on desktop).",
+        "Build semi-circle SVG arc with gradient stroke (Cyan to Purple). Ensure SVG scales responsively.",
+        "Place large number '4,250' in center with label 'TOKENS / HR'.",
+        "Apply CSS 'pulse' animation to the number.",
+        "Add footer text 'Optimization: Active' in small green text."
+      ],
+      "passes": false
+    },
+    {
+      "category": "ai-feedback",
+      "description": "Ralph's Live Console Feed",
+      "steps": [
+        "Create vertical card 'SYSTEM LOGS'. On mobile spanning 1 col, on desktop spanning 1 col but 2 rows height if possible ('md:row-span-2').",
+        "Style as terminal: dark bg, mono font, green cursor. Ensure text wraps nicely on smaller screens.",
+        "Render fake logs: '[03:14 AM] Refactoring utils.ts...', '[03:15 AM] 12 Tests Passed', '[03:18 AM] Deploying to Edge...'.",
+        "Highlight latest log entry in white."
+      ],
+      "passes": false
+    }
+  ]
+}
