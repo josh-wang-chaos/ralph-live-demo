@@ -41,3 +41,11 @@ Files:
 |- .ralph/prd.json
 Notes: none.
 
+[0.0.1]
+Task: Completed ai-feedback "System Logs" console feed (feature 5).
+Decisions: Static log list in app/page.tsx, row-span on md, terminal panel with cursor pulse.
+Files:
+|- app/page.tsx
+|- .ralph/prd.json
+Notes: none.
+

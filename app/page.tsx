@@ -105,6 +105,37 @@ function VelocityGauge() {
   );
 }
 
+const SYSTEM_LOGS = [
+  "[03:14 AM] Refactoring utils.ts...",
+  "[03:15 AM] 12 Tests Passed",
+  "[03:18 AM] Deploying to Edge...",
+];
+
+function SystemLogs() {
+  return (
+    <GlassCard className="md:row-span-2">
+      <div className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">
+        System Logs
+      </div>
+      <div className="mt-4 rounded-xl border border-white/10 bg-black/60 p-4 font-mono text-xs text-emerald-400">
+        {SYSTEM_LOGS.map((entry, index) => (
+          <div
+            key={entry}
+            className={
+              index === SYSTEM_LOGS.length - 1
+                ? "text-white"
+                : "text-emerald-400"
+            }
+          >
+            {entry}
+          </div>
+        ))}
+        <div className="mt-2 inline-flex h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
+      </div>
+    </GlassCard>
+  );
+}
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
@@ -113,6 +144,7 @@ export default function Home() {
           <Header />
           <CommitHeatmap />
           <VelocityGauge />
+          <SystemLogs />
           <GlassCard>
             <div className="text-sm text-slate-300">Metrics</div>
           </GlassCard>
