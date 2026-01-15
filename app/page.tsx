@@ -56,6 +56,55 @@ function CommitHeatmap() {
   );
 }
 
+function VelocityGauge() {
+  return (
+    <GlassCard>
+      <div className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">
+        Token Velocity
+      </div>
+      <div className="mt-6 flex items-center justify-center">
+        <div className="relative flex h-36 w-36 items-center justify-center sm:h-44 sm:w-44">
+          <svg
+            className="h-full w-full"
+            viewBox="0 0 200 120"
+            fill="none"
+          >
+            <defs>
+              <linearGradient
+                id="velocity-gradient"
+                x1="0"
+                y1="0"
+                x2="200"
+                y2="0"
+              >
+                <stop offset="0%" stopColor="#22d3ee" />
+                <stop offset="100%" stopColor="#a855f7" />
+              </linearGradient>
+            </defs>
+            <path
+              d="M10 110 A90 90 0 0 1 190 110"
+              stroke="url(#velocity-gradient)"
+              strokeWidth="10"
+              strokeLinecap="round"
+            />
+          </svg>
+          <div className="absolute top-1/2 flex -translate-y-2 flex-col items-center">
+            <div className="text-3xl font-semibold text-white animate-pulse-soft">
+              4,250
+            </div>
+            <div className="mt-1 text-[10px] uppercase tracking-[0.3em] text-slate-400">
+              Tokens / Hr
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="mt-4 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-400">
+        Optimization: Active
+      </div>
+    </GlassCard>
+  );
+}
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
@@ -63,6 +112,7 @@ export default function Home() {
         <main className="grid grid-cols-1 gap-6 p-4 md:grid-cols-4 md:p-8">
           <Header />
           <CommitHeatmap />
+          <VelocityGauge />
           <GlassCard>
             <div className="text-sm text-slate-300">Metrics</div>
           </GlassCard>

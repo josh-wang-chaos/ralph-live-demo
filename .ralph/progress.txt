@@ -32,3 +32,12 @@ Files:
 |- .ralph/prd.json
 Notes: none.
 
+[0.0.1]
+Task: Completed data-viz "Velocity Gauge" (feature 4).
+Decisions: Added custom pulse-soft keyframes in globals for number emphasis, SVG arc uses linearGradient.
+Files:
+|- app/page.tsx
+|- app/globals.css
+|- .ralph/prd.json
+Notes: none.
+

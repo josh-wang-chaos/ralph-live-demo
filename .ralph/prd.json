@@ -47,7 +47,7 @@
         "Apply CSS 'pulse' animation to the number.",
         "Add footer text 'Optimization: Active' in small green text."
       ],
-      "passes": false
+      "passes": true
     },
     {
       "category": "ai-feedback",
